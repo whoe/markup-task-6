@@ -28,6 +28,7 @@
 .news
 {
     grid-area: n;
+    align-self: end;
 }
 
 .banner
@@ -77,6 +78,16 @@
     text-decoration: none;
     color: #000;
     font-weight: normal;
+}
+
+.wrapper a:focus
+{
+    outline: 2px solid #ffdb4d;
+}
+
+.wrapper a:active
+{
+    outline: none;
 }
 
 .wrapper h2 a,
@@ -180,7 +191,7 @@ main form
     font-size: 18px;
     border: 2px solid #ffdb4d;
     height: 32px;
-    padding-left: 10px;
+    padding: 1px 0 1px 10px;
 }
 
 .input-search:focus
@@ -218,6 +229,7 @@ main form
     display: inline-block;
     height: 38px;
     vertical-align: bottom;
+    width: 0;
 }
 
 .button-search-decoration div
@@ -268,7 +280,8 @@ main form
 }
 
 .keyboard:hover,
-.speech:hover
+.speech:hover,
+.more:hover
 {
     opacity: .7;
 }
@@ -345,6 +358,16 @@ a.bolder
 .exchange .label
 {
     letter-spacing: 1px;
+}
+
+.more
+{
+    cursor: pointer;
+    vertical-align: bottom;
+    width: 15px;
+    height: 15px;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'15\' height=\'15\' viewBox=\'0 0 15 15\'%3E%3Cellipse cx=\'2.5\' cy=\'7.5\' rx=\'1.5\' ry=\'1.5\'/%3E%3Cellipse cx=\'7.5\' cy=\'7.5\' rx=\'1.5\' ry=\'1.5\'/%3E%3Cellipse cx=\'12.5\' cy=\'7.5\' rx=\'1.5\' ry=\'1.5\'/%3E%3C/svg%3E');
+    opacity: .3;
 }
 
 .helper-search

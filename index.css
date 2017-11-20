@@ -506,3 +506,61 @@ input[id='poster']:not(:checked) ~ .widgets .widget-poster
     position: absolute;
     bottom: 0;
 }
+
+.auto-news-decoration
+{
+    width: 100%;
+    position: relative;
+}
+
+.auto-news-decoration ul
+{
+    overflow-y: scroll;
+    max-height: 180px;
+}
+
+.auto-news-decoration ul::-webkit-scrollbar
+{
+    width: 0;
+}
+
+.auto-news-decoration .decoration-top,
+.auto-news-decoration .decoration-bottom
+{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 35px;
+    position: absolute;
+}
+
+.auto-news-decoration .decoration-top
+{
+    top: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0), rgba(255,255,255,1));
+}
+
+.auto-news-decoration .decoration-bottom
+{
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(255,255,255,1));
+}
+
+.wrapper .auto-news-decoration li:last-of-type
+{
+    margin-bottom: 0;
+}
+
+.tv-online
+{
+    margin-left: 20px;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #418af9;
+    background-clip: padding-box;
+    background-image: linear-gradient(to right,#00a3fa,#716ef8);
+}

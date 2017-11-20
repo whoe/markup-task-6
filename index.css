@@ -1,0 +1,508 @@
+@font-face
+{
+    font-family: 'Oswald';
+    src: url(fonts/Oswald-Regular.ttf);
+}
+
+.wrapper
+{
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 1.5fr) 1fr;
+    grid-template-rows: repeat(5, max-content);
+    grid-row-gap: 10px;
+    grid-template-areas: 'l c c c r'
+        'l n n b r'
+        'l s s s r'
+        'l m m m r'
+        'l w w w r';
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.config
+{
+    position: relative;
+    grid-area: c;
+}
+
+.news
+{
+    grid-area: n;
+}
+
+.banner
+{
+    grid-area: b;
+    align-self: end;
+}
+
+.services
+{
+    grid-area: s;
+}
+
+.left-column
+{
+    grid-area: l;
+}
+
+.right-column
+{
+    grid-area: r;
+}
+
+.logo
+{
+    grid-area: y;
+}
+
+.main
+{
+    grid-area: m;
+    position: relative;
+}
+
+.widgets
+{
+    grid-area: w;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    max-height: 490px;
+}
+
+.wrapper a
+{
+    text-decoration: none;
+    color: #000;
+    font-weight: normal;
+}
+
+.wrapper h2 a,
+.wrapper .services a,
+.wrapper .widget-jokes a,
+.refresh .show-other
+{
+    color: #0054b9;
+}
+
+.wrapper a:hover,
+.wrapper .services a:hover,
+.refresh:hover .show-other,
+.config label:hover
+{
+    color: #c00;
+}
+
+.wrapper h3 a
+{
+    color: #6da2e1;
+}
+
+.wrapper li
+{
+    margin-bottom: 10px;
+}
+
+.geolocation-arrow
+{
+    display: inline-block;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg width=\'19\' height=\'38\' viewBox=\'0 0 19 38\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\'%3E%3Cdefs%3E%3Cg id=\'a\'%3E%3Cpath d=\'m15 4l-11.9 5.3 5.8 0.8 0.5 5.5 5.6-11.6z\'/%3E%3C/g%3E%3C/defs%3E%3Cuse xmlns=\'http://www.w3.org/2000/svg\' xlink:href=\'%23a\' fill=\'%23B3B3B3\'/%3E%3Cuse xmlns=\'http://www.w3.org/2000/svg\' xlink:href=\'%23a\' fill=\'%23d00\' transform=\'translate(0 19)\'/%3E%3C/svg%3E');
+    width: 19px;
+    height: 19px;
+    vertical-align: middle;
+}
+
+.geolocation-city,
+.widget-tele .channel,
+.news .date,
+.exchange .delta,
+.helper-search a,
+.widget-auto-news .time,
+.widget-poster .genre
+{
+    color: #999;
+}
+
+.widget-tele .channel
+{
+    display: inline-block;
+}
+
+.geolocation
+{
+    padding: 6px 0;
+    display: block;
+}
+
+.config .config-open
+{
+    display: block;
+    padding: 10px;
+    direction: rtl;
+}
+
+.geolocation:hover .geolocation-arrow
+{
+    background-position-y: bottom;
+}
+
+.geolocation-city:hover
+{
+    color: #c00;
+}
+
+main form
+{
+    font-size: 0;
+}
+
+.logo
+{
+    font-family: 'Oswald';
+    font-size: 28px;
+    display: inline-block;
+    position: absolute;
+    right: 100%;
+    padding-right: 20px;
+    line-height: 38px;
+}
+
+.logo::first-letter
+{
+    color: #f00;
+}
+
+.input-search
+{
+    width: calc(100% - 114px);
+    font-size: 18px;
+    border: 2px solid #ffdb4d;
+    height: 32px;
+    padding-left: 10px;
+}
+
+.input-search:focus
+{
+    outline: none;
+}
+
+.button-search
+{
+    font-size: 18px;
+    height: 38px;
+    border: none;
+    vertical-align: bottom;
+    background-color: #ffdb4d;
+    padding: 0 30px 0 15px;
+    width: 100px;
+}
+
+.button-search:active
+{
+    background-color: #f2cf46;
+    border-color: #f2cf46;
+}
+
+.button-search:active,
+.button-search:focus
+{
+    outline: none;
+}
+
+.button-search-decoration,
+.after-input-search
+{
+    position: relative;
+    display: inline-block;
+    height: 38px;
+    vertical-align: bottom;
+}
+
+.button-search-decoration div
+{
+    background-color: #fff;
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    left: -15px;
+}
+
+.button-search-decoration div:first-child
+{
+    transform-origin: left top;
+    transform: rotate(-25deg);
+}
+
+.button-search-decoration div:last-child
+{
+    transform-origin: left bottom;
+    transform: rotate(25deg);
+}
+
+.keyboard,
+.speech
+{
+    position: absolute;
+    height: 36px;
+    cursor: pointer;
+    opacity: .3;
+}
+
+.keyboard
+{
+
+    width: 27px;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'27\' height=\'12\'%3E%3Cpath opacity=\'1\' fill-rule=\'evenodd\' clip-rule=\'evenodd\' d=\'M25.693 0h-24.153c-1.104 0-1.527.422-1.527 1.527v8.961c0 1.105.423 1.527 1.527 1.527h24.153c1.104 0 1.307-.422 1.307-1.527v-8.961c0-1.105-.202-1.527-1.307-1.527zm-2.672 2.061h1.935v1.934h-1.935v-1.934zm-6 0h1.935v1.934h-1.935v-1.934zm2.935 3v1.934h-1.935v-1.934h1.935zm-5.935-3h1.935v1.934h-1.935v-1.934zm2.935 3v1.934h-1.935v-1.934h1.935zm-5.935-3h1.935v1.934h-1.935v-1.934zm2.935 3v1.934h-1.935v-1.934h1.935zm-5.935-3h1.935v1.934h-1.935v-1.934zm2.935 3v1.934h-1.935v-1.934h1.935zm-5.935-3h1.935v1.934h-1.935v-1.934zm-3 0h1.935v1.934h-1.935v-1.934zm0 3h2.994v1.934h-2.994v-1.934zm3.95 4.933h-3.978v-1.933h3.978v1.933zm.05-4.933h1.935v1.934h-1.935v-1.934zm13.95 4.933h-12.963v-1.933h12.963v1.933zm.05-7.933h1.935v1.934h-1.935v-1.934zm4.95 7.933h-3.978v-1.933h3.978v1.933zm.029-2.999h-3.979v-1.934h3.979v1.934z\'/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position-y: 12px;
+    left: -39px;
+}
+
+.speech
+{
+    width: 36px;
+    background: url('img/speech.svg') 0 7px no-repeat;
+    left: -70px;
+}
+
+.keyboard:hover,
+.speech:hover
+{
+    opacity: .7;
+}
+
+.widget
+{
+    width: 33%;
+    padding-right: 20px;
+}
+
+.widget ul
+{
+    padding: 0;
+}
+
+.widget li
+{
+    list-style-type: none;
+}
+
+.user-card
+{
+    border-radius: 3px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.1), 0 2px 6px 0 rgba(0,0,0,.1);
+}
+
+.user-card .login,
+.user-card .messages
+{
+    padding: 10px;
+}
+
+.user-card .login::first-letter
+{
+    color: #f00;
+}
+
+.news h2,
+.news h3
+{
+    display: inline;
+}
+
+.news ul
+{
+    padding: 0;
+}
+
+.news .date,
+.widget-auto-news .time
+{
+    font: 11px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.banner img
+{
+    display: block;
+}
+
+.exchange div
+{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.exchange .label,
+.widget-services li a:first-child,
+.user-card .messages .count,
+a.bolder
+{
+    font-weight: bolder;
+}
+
+.exchange .label
+{
+    letter-spacing: 1px;
+}
+
+.helper-search
+{
+    margin: 5px 0 10px;
+}
+
+.services a
+{
+    font-size: 15px;
+    line-height: 36px;
+    margin-right: 20px;
+}
+
+.widget-map a.bolder
+{
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.widget-traffic-jam .traffic-jam-value,
+.widget-weather .weather-value
+{
+    background-repeat: no-repeat;
+    height: 33px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.widget-traffic-jam .traffic-jam-value
+{
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'33\' height=\'33\' viewBox=\'0 0 33 33\'%3E%3Cpath fill=\'%234A8C16\' d=\'M14.588 7.034c-.887.01-1.141.112-2.061.209-3.178.336-6.384 2.727-7.463 5.883-1.079 3.156-.09 5.066 3.825 5.066 1.41-.831 1.435-8.614 5.402-10.269.557-.233 1.118-.429 1.672-.586.267-.076.69-.24.69-.24s-.971-.076-2.065-.063z\'/%3E%3Ccircle fill=\'%2366AB3C\' cx=\'17.003\' cy=\'17.073\' r=\'9.976\'/%3E%3Cpath fill=\'%23333\' d=\'M17.032 7.074c-.87-.016-1.822-.07-3.347.085 4.065.167 7.811 2.414 9.322 7.124.464 1.551 2.469 3.463 3.924 3.581.027-.293.04-.59.04-.891 0-5.411-4.486-9.8-9.939-9.899z\'/%3E%3C/svg%3E');
+}
+
+.widget-weather .weather-value
+{
+    background-image: url('img/weather.svg');
+}
+
+.widget-traffic-jam .traffic-jam-value span,
+.widget-weather .weather-value span
+{
+    vertical-align: middle;
+    line-height: 33px;
+    margin-left: 40px;
+    color: #000;
+}
+
+.widget-poster .genre
+{
+    padding-left: 10px;
+}
+
+.refresh,
+.config label
+{
+    cursor: pointer;
+}
+
+.refresh .arrow,
+.refresh .show-other
+{
+    vertical-align: middle;
+}
+
+.refresh .arrow 
+{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('img/round-right-arrow.png') no-repeat;
+    opacity: .4;
+}
+
+.refresh:hover .arrow
+{
+    opacity: .8;
+}
+
+.wrapper input,
+.widget-jokes .joke,
+.config-widgets,
+.widgets > h2:first-child
+{
+    display: none;
+}
+
+.wrapper input.input-search
+{
+    display: inline;
+}
+
+.widget-jokes input:checked + .joke,
+input[name='config']:checked + .config-widgets,
+.config-widgets label
+{
+    display: block;
+}
+
+.config-widgets
+{
+    position: absolute;
+    right: -50px;
+    background-color: #fff;
+    padding: 5px;
+    width: 200px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.2), 0 6px 8px 0 rgba(0,0,0,.2);
+    border-radius: 3px;
+}
+
+.config-widgets label
+{
+    margin-bottom: 10px;
+}
+
+.config-widgets label::before
+{
+    content: '';
+    background-image: url('img/checkbox-unchecked.png');
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: contain;
+    vertical-align: bottom;
+}
+
+input[id='services']:checked ~ .config label[for='services']::before,
+input[id='jokes']:checked ~ .config label[for='jokes']::before,
+input[id='tele']:checked ~ .config label[for='tele']::before,
+input[id='auto-news']:checked ~ .config label[for='auto-news']::before,
+input[id='weather']:checked ~ .config label[for='weather']::before,
+input[id='traffic-jam']:checked ~ .config label[for='traffic-jam']::before,
+input[id='map']:checked ~ .config label[for='map']::before,
+input[id='poster']:checked ~ .config label[for='poster']::before
+{
+    background-image: url('img/checkbox-checked.png');
+}
+
+input[id='services']:not(:checked) ~ .widgets .widget-services,
+input[id='jokes']:not(:checked) ~ .widgets .widget-jokes,
+input[id='tele']:not(:checked) ~ .widgets .widget-tele,
+input[id='auto-news']:not(:checked) ~ .widgets .widget-auto-news,
+input[id='weather']:not(:checked) ~ .widgets .widget-weather,
+input[id='traffic-jam']:not(:checked) ~ .widgets .widget-traffic-jam,
+input[id='map']:not(:checked) ~ .widgets .widget-map,
+input[id='poster']:not(:checked) ~ .widgets .widget-poster
+{
+    display: none;
+}
+
+.joke
+{
+    min-height: 144px;
+    position: relative;
+}
+
+.joke label
+{
+    position: absolute;
+    bottom: 0;
+}
